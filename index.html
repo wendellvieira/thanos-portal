@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thanos Portal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/three.min.js"></script>
+</head>
+<body>
+    <script>
+        var scene, 
+            sceneLight,
+            cam,
+            renderer,
+            w = window.innerWidth,
+            h = window.innerHeight;
+
+        function initScene(){
+            // Criando uma cena
+            scene = new THREE.Scene();
+
+            // Criando uma Luz direcional
+            sceneLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            sceneLight.position.set(0,0,1);
+            scene.add(sceneLight);
+
+            // Criando uma camera...
+            cam = new THREE.PerspectiveCamera( 80, w/h, 1, 10000);
+            cam.position.z = 1000;
+            scene.add(cam);
+
+            // Criando um rederizador webGl
+            renderer = new THREE.WebGLRenderer();
+            renderer.setClearColor(0x000000, 1);
+            renderer.setSize( w, h );
+            document.body.appendChild( renderer.domElement );
+            renderer.render( scene, cam );
+
+        }
+
+        initScene();
+    
+    </script>
+</body>
+</html>
