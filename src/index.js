@@ -1,12 +1,13 @@
-import _ from 'lodash';
+import InitSceneLight from './InitScene/InitSceneLight'
+import InitPortalLight from './InitScene/InitPortalLight'
 
-function component() {
-    const element = document.createElement('div');
 
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+function InitScene(){
+    let scene = new THREE.Scene();
 
-    return element;
+    // Iniciando Luzes
+    InitSceneLight(scene);
+    InitPortalLight(scene);
 }
 
-document.body.appendChild(component());
+InitScene();
