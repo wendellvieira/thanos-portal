@@ -1,0 +1,27 @@
+{
+  "name": "thanos-portal",
+  "version": "1.0.0",
+  "description": "Estudo de three.js \r > Este projeto é uma cópia com finalidade de estudo do tutoria de [Red Stapler](https://www.youtube.com/watch?v=KeVW_ezeGz8)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wendellvieira/thanos-portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wendellvieira/thanos-portal/issues"
+  },
+  "homepage": "https://github.com/wendellvieira/thanos-portal#readme",
+  "devDependencies": {
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
