@@ -1,13 +1,6 @@
-import InitSceneLight from './InitScene/InitSceneLight'
-import InitPortalLight from './InitScene/InitPortalLight'
+import InitScene from './InitScene'
 
+(function(){
+   const Setup = InitScene();
 
-function InitScene(){
-    let scene = new THREE.Scene();
-
-    // Iniciando Luzes
-    InitSceneLight(scene);
-    InitPortalLight(scene);
-}
-
-InitScene();
+})();
