@@ -4,7 +4,11 @@ import InitCamera from './InitCamera'
 import InitRenderer from './InitRenderer'
 
 export default function(){
-    const Setup = {}
+    const Setup = {
+        PortalParticles: [],
+        SmokeParticles: [],
+        Clock: null
+    }
     Setup.Scene = new THREE.Scene();
 
     // Iniciando Luzes
