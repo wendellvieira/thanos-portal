@@ -40,19 +40,19 @@
             // scene.add(cam);
 
             // Criando um rederizador webGl
-            renderer = new THREE.WebGLRenderer();
-            renderer.setClearColor(0x000000, 1);
-            renderer.setSize( w, h );
-            document.body.appendChild( renderer.domElement );
+            // renderer = new THREE.WebGLRenderer();
+            // renderer.setClearColor(0x000000, 1);
+            // renderer.setSize( w, h );
+            // document.body.appendChild( renderer.domElement );
             
-            particleSetup();
+            // particleSetup();
 
         }
 
         function particleSetup(){
-            let loader = new THREE.TextureLoader();
+            // let loader = new THREE.TextureLoader();
 
-            loader.load("images/smoke.png", function(texture){
+            // loader.load("images/smoke.png", function(texture){
                 // portalGeo = new THREE.PlaneBufferGeometry(350, 350);
                 // portalMaterial = new THREE.MeshStandardMaterial({
                 //     map: texture,
@@ -90,8 +90,8 @@
                 //     scene.add(particle);
                 // }
 
-                clock = new THREE.Clock();
-                animate();
+                // clock = new THREE.Clock();
+                // animate();
             });
         }
 

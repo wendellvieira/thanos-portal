@@ -2,12 +2,14 @@ import PortalCreate from './PortalCreate'
 import SmokeCreate from './SmokeCreate'
 
 export default function(Setup){
-    let loader = new THREE.TextureLoader();
-
-    loader.load("statics/images/smoke.png", function(texture){
-        PortalCreate(texture, Setup);
-        SmokeCreate(texture, Setup);
+    return new Promise( (Resolve, Reject) => {
+        let loader = new THREE.TextureLoader();
+    
+        loader.load("statics/images/smoke.png", async function(texture){
+            await PortalCreate(texture, Setup);
+            await SmokeCreate(texture, Setup);
+            Setup.Clock = new THREE.Clock();
+            Resolve();
+        });
     });
-
-    Setup.Clock = new THREE.Clock();
 }

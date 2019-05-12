@@ -1,8 +1,12 @@
 import InitScene from './InitScene'
 import ParticleSetup from './PaticleSetup'
+import {PortalAnimate} from './PortalAnimate'
 
-(function(){
-   const Setup = InitScene();
-   ParticleSetup(Setup);
+(async function(){
+   const Setup = {};
+   
+   await InitScene(Setup);
+   await ParticleSetup(Setup);
+   PortalAnimate(Setup);
 
 })();
